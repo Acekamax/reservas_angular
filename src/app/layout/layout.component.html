@@ -1,0 +1,46 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Clases</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="../reservas">Reservas<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row" style="margin-top: 2%;">
+        <div class="col">
+        </div>
+        <div class="col-md-8">
+            <div class="card text-center">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Cupos</th>
+                            <th scope="col">Reservar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of clases;">
+                            <th scope="row">{{item.id}}</th>
+                            <td>{{item.nombre}}</td>
+                            <td>{{item.fecha}}</td>
+                            <td>{{item.cupos}}</td>
+                            <td><input type="submit" class="fadeIn fourth" value="Reservar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
